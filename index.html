@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Merve & Burak" />
+    <meta property="og:description" content="Davetlisiniz" />
+    <meta property="og:url" content="https://merve-burak.vercel.app/" />
+    <meta
+      property="og:image"
+      content="https://merve-burak.vercel.app/img/wp.png"
+    />
     <title>Merve & Burak - Düğün Davetiyesi</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
@@ -1057,7 +1064,12 @@
             <label class="text-xl font-semibold mt-4" for="Etkinlik"
               >Katılacağınız Etkinlik:</label
             >
-            <select class="border rounded p-2" id="Etkinlik" name="Etkinlik" required>
+            <select
+              class="border rounded p-2"
+              id="Etkinlik"
+              name="Etkinlik"
+              required
+            >
               <option value="" selected disabled hidden>Seçiniz..</option>
               <option value="Ankara">Ankara</option>
               <option value="Sivas">Sivas</option>
@@ -1104,7 +1116,9 @@
                 fill="currentFill"
               />
             </svg>
-            <span class="text-gray-600 w-full">Katılım bilginiz alınıyor...</span>
+            <span class="text-gray-600 w-full"
+              >Katılım bilginiz alınıyor...</span
+            >
           </div>
         </div>
       </div>
@@ -1182,7 +1196,7 @@
         var formData = new FormData(form);
         document.getElementById("loading").style.visibility = "visible";
         document.querySelector("#submit-to-google-sheet").style.visibility =
-            "hidden";
+          "hidden";
         fetch(scriptURL, { method: "POST", body: formData })
           .then((response) => {
             console.log("Thank you! Form is submitted");
